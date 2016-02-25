@@ -3,6 +3,8 @@ from django.shortcuts import render, render_to_response
 
 
 # Create your views here.
+from bootstrap_app.models import Trail
+
 
 def index_view(request):
     return render_to_response("index.html", {})
@@ -14,7 +16,8 @@ def about_me_view(request):
 
 
 def deer_leap_view(request):
-    return render_to_response("deer_leap_view.html", {})
+    deer_data = Trail.objects.filter(name='Deer Leap')
+    return render_to_response("deer_leap_view.html", {"deer_data": deer_data})
 
 
 def pico_view(request):
