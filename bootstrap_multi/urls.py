@@ -16,9 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from bootstrap_app.views import index_view
+from bootstrap_app.views import index_view, about_me_view, pico_view, mbr_view, deer_leap_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index_view)
+    url(r'^$', index_view, name='index'),
+    url(r'^about_me/', about_me_view, name='about_me'),
+    url(r'^pico/', pico_view, name='pico'),
+    url(r'^mbr/', mbr_view, name='mbr'),
+    url(r'^deerleap/', deer_leap_view, name='deerleap')
+
 ]

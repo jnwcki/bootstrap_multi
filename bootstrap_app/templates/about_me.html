@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel=stylesheet type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <meta charset="UTF-8">
+    <title>About Me</title>
+</head>
+<body><div class="container">
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url 'index' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'about_me' %}">About Me</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+<div class="row">
+    <div class="col-md-2">
+        <img src="{% static 'me.JPG' %}" width="100" class="img-rounded"/>
+    </div>
+    <div class="col-md-8">
+        <h1>Jude Nowicki</h1>
+    </div>
+</div>
+<span>
+I am an outdoor enthusiast, an Appalachian Trail thru-hiker, imbiber of craft beer, former
+    hiking guide and current student of back-end web development with Python and Django.
+    </span>
+<br>
+    <address>
+    You can reach me at:<br>
+    123 Anywhere Ln<br>
+    Happytown, USA<br>
+    00000<br>
+</address>
+
+</div></body>
+</html>

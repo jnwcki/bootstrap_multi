@@ -5,12 +5,60 @@
 <head>
     <link rel=stylesheet type="text/css" href="{% static 'css/bootstrap.css' %}">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Favorite Trails in the Killington, VT area</title>
 </head>
-<body>
-<div class="container">
-<img src="{% static 'kitten.png' %}" width="100"/>
-This is my website!!!!! AAAAAAAAAAAAH!
+<body><div class="container">
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url 'index' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'about_me' %}">About Me</a></li>
+  <li role="presentation"><a href="{% url 'pico' %}">Pico Peak</a></li>
+  <li role="presentation"><a href="{% url 'deerleap' %}">Deer Leap</a></li>
+  <li role="presentation"><a href="{% url 'mbr' %}">Mt. Tom</a></li>
+</ul>
+<div class="row">
+    <div class="col-md-2">
+        <img src="{% static 'me.JPG' %}" width="100" class="img-rounded"/>
+    </div>
 </div>
-</body>
+<div class="container">
+        Welcome to my website on several of my favorite trails in the Killington, VT area.
+    Here are several of my absolute favorites which I have personally guided
+    guests on many times during the years which I worked at a guided outdoor
+    adventure outfit in Killington. There are trails in the area for every skill
+    level and activity.
+ </div>
+    <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="{% url 'pico' %}"><img src="http://4000footers.com/photo%20pico7.jpg" alt="Pico Peak"></a>
+      <div class="caption">
+        <h3>Pico Peak</h3>
+        <p>The slightly smaller sibling of Killington Peak, Vermont's second highest peak.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="{% url 'deerleap' %}"><img src="http://www.trailfinder.info/images/trails/IMG_0163.JPG" alt="Deer Leap"></a>
+      <div class="caption">
+        <h3>Deer Leap Mountain</h3>
+        <p>A short hike suitable for beginner/intermediate hikers with breathtaking views.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="{% url 'mbr' %}"><img src="http://www.nps.gov/mabi/planyourvisit/images/MABI-Unigrid-Map-600x400_1.jpg" alt="..."></a>
+      <div class="caption">
+        <h3>Mt. Tom</h3>
+        <p>Marsh Billings Rockefeller Nat'l Historic Park has miles of easy trail by the town of Woodstock.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div></body>
 </html>
