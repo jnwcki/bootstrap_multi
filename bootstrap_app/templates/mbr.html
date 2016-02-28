@@ -1,10 +1,28 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel=stylesheet type="text/css" href="{% static 'css/bootstrap.css' %}">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body><div class="container">
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url 'index' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'about_me' %}">About Me</a></li>
+  <li role="presentation"><a href="{% url 'pico' %}">Pico Peak</a></li>
+  <li role="presentation"><a href="{% url 'deerleap' %}">Deer Leap</a></li>
+  <li role="presentation"><a href="{% url 'mbr' %}">Mt. Tom</a></li>
+</ul>
+<br><div><h3>Destination: {{ mbr.name }}</h3></div>
+<br>One-way Length: {{ mbr.one_way_length }} Miles
+<br>Trailhead: {{ mbr.trailhead }}
+<br>About: {{ mbr.blurb }}
+<br>Estimated Hiking Time: {{ mbr.hours_hiking_time }} Hours
+<br><div><img src="{{ mbr.image_link }}" height="300"/></div>
 
-</body>
+
+
+</div></body>
 </html>
